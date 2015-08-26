@@ -1,12 +1,12 @@
 var https = require('https');
+var config = require('./config.json');
 
 class AL {
     constructor() {
-        this.clientId = '213438082188010';
-        this.clientSecret = '6ada08fc1074d6efb740d132dcd016a3';
+        this.clientId = config.clientId;
+        this.clientSecret = config.clientSecret;
         this.token = '';
     }
-
     getFBToken() {
         return new Promise((resolve, reject) => {
             https.get({

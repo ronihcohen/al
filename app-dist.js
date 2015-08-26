@@ -7,13 +7,14 @@ var _classCallCheck = require('babel-runtime/helpers/class-call-check')['default
 var _Promise = require('babel-runtime/core-js/promise')['default'];
 
 var https = require('https');
+var config = require('./config.json');
 
 var AL = (function () {
     function AL() {
         _classCallCheck(this, AL);
 
-        this.clientId = '213438082188010';
-        this.clientSecret = '6ada08fc1074d6efb740d132dcd016a3';
+        this.clientId = config.clientId;
+        this.clientSecret = config.clientSecret;
         this.token = '';
     }
 
