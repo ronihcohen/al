@@ -18,9 +18,13 @@ class FacebookGroup {
     getFeed() {
         return this.getToken().then((auth)=>{
             this.token = auth.access_token;
-            var path = '/v2.4/'+ this.groupId + '/feed' +
-                '?access_token='+this.token;
-            return this.httpRec(path)
+            if (this.token){
+                var path = '/v2.4/'+ this.groupId + '/feed' +
+                    '?access_token='+this.token;
+                return this.httpRec(path)
+            } else {
+                return auth;
+            }
         });
     };
     httpRec(path) {
