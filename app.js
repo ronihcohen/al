@@ -20,7 +20,8 @@ class FacebookGroup {
             this.token = auth.access_token;
             if (this.token){
                 var path = '/v2.4/'+ this.groupId + '/feed' +
-                    '?access_token='+this.token;
+                    '?access_token='+this.token+
+                    '&fields=from,attachments,comments{attachment,from}';
                 return this.httpRec(path)
             } else {
                 return auth;
