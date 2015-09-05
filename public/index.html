@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+    <style>
+        body{
+            margin: 0px;
+            line-height: 0px;
+            background-color: black;
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+        }
+        div {
+            display: inline-block;
+            position: relative;
+            margin: 5px;
+        }
+        img{
+            height: 200px;
+            width: 200px;
+            cursor: pointer;
+            opacity: 1;
+            transition: opacity 0.2s;
+        }
+        span {
+            position: absolute;
+            bottom: 0px;
+            color: white;
+            line-height: initial;
+            display: none;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 18px;
+            z-index: 1;
+            min-width: 180px;
+        }
+        div:hover img{
+            opacity: 0.2;
+        }
+        div:hover span{
+            display: initial;
+        }
+    </style>
+</head>
+<body>
+<div id="ytplayer"></div>
+<script src="bower_components/fetch/fetch.js"></script>
+<script src="al-compiled.js"></script>
+</body>
+</html>
